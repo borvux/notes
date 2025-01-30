@@ -224,21 +224,36 @@ require './app'
 run Sinatra::Application
 ```
 
-## **17. Common Gems**
+## **17. Automatically Reloading Code**
+
+Before we go any further, let’s take care of the huge annoyance of having to shut down and restart our web server any time we make a change to our code.
+
+Perhaps unsurprisingly at this point, we’re going to use a gem for that, called `sinatra-contrib`. Let’s add it to our Gemfile:
+
+```ruby
+gem "sinatra-contrib"
+```
+
+and then run `bundle install`. Next, add the following require statement to `dice.rb`:
+
+```ruby
+require "sinatra/reloader"
+```
+
+## **18. Common Gems**
 
 Use gems like `sinatra-contrib` for additional features (e.g., reloading, JSON support).
 
 Use `sinatra-activerecord` for database integration.
 
-## **18. Key Commands**
+## **19. Key Commands**
 
 - Run a Sinatra app: `ruby app.rb`
 - Use `rackup` to start the app with a `config.ru` file.
 
-## **19. Best Practices**
+## **20. Best Practices**
 
 - Keep your routes clean and delegate logic to helper methods or models.
 - Use modular style for larger applications.
 - Test your app thoroughly.
-
 
