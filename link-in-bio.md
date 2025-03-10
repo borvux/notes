@@ -219,3 +219,187 @@
        box-shadow: 2px 2px 10px rgba(122, 32, 122, 0.25);
      }
      ```
+<hr>
+
+**Full Code**
+
+   ```html
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <!-- Section 1: Setup -->
+          <!-- Required HTML boilerplate: Document type, language, meta tags, and favicon links -->
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="description" content="Raghu Betina's frequently shared links">
+      
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+          <link rel="manifest" href="/site.webmanifest">
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f0faff">
+          <meta name="msapplication-TileColor" content="#00587a">
+          <meta name="theme-color" content="#002f4b">
+      
+          <title>Raghu Betina's links</title>
+      
+          <!-- Section 2: References & Use the Source! -->
+          <!-- External resources: Google Fonts for typography and Font Awesome for social icons -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+      
+          <!-- Section 8, 9, 10, 11 & 12: Styling (Sizing images, Adding a background, Fine-tuning layout & typography, Final touches) -->
+          <style>
+            /* Global Setup: Ensure the full height for html and body */
+            html, body {
+              min-height: 100%;
+            }
+            /* Section 9: Adding a background and choosing contrasting text color */
+            body {
+              padding-top: 40px;
+              padding-bottom: 40px;
+              background: linear-gradient(180deg, #002f4b, #00587a, #008cba, #00bfff, #66d9ff, #a3e9ff, #d1faff, #f0faff);
+              color: rgba(255, 255, 255, 1.0);
+              font-family: "Raleway"; /* Section 11: Fine-tuning typography with a web font */
+            }
+            /* Section 8: Sizing images */
+            .avatar-image {
+              width: 128px;
+              height: 128px;
+              object-fit: cover;
+              border-radius: 128px;
+            }
+            .thumbnail {
+              width: 48px;
+              height: 48px;
+              border-radius: 48px;
+              object-fit: cover;
+            }
+            /* Default styling for links */
+            a {
+              color: rgba(255, 255, 255, 1.0);
+              text-decoration: none;
+            }
+            /* Section 10 & 12: Fine-tuning layout and final touches on the link items */
+            .item {
+              background-color: rgba(149, 123, 173, 0.5);
+              border-radius: 200px;
+              padding: 5px 53px 5px 5px;
+              box-shadow: 2px 2px 10px 0px rgba(122, 32, 122, 0.25);
+              margin-bottom: 20px;
+              display: flex;
+              align-items: center;
+            }
+            /* Section 7: Main container layout (centering the main content) */
+            .main-container {
+              max-width: 640px;
+              margin: auto;
+            }
+            /* Section 10: Fine-tuning layout details for each row */
+            .image-row {
+              margin-bottom: 20px;
+              text-align: center;
+            }
+            .name-row {
+              margin-bottom: 30px;
+              text-align: center;
+              font-family: "Playfair Display"; /* Section 11: Fine-tuning typography for the name */
+              font-size: 24px;
+              font-weight: 900;
+            }
+            .social-icons-row {
+              margin-bottom: 30px;
+              display: flex;
+              justify-content: space-around;
+            }
+            .link-text {
+              text-align: center;
+              flex-grow: 1;
+            }
+          </style>
+        </head>
+        <body>
+          <!-- Section 4: First things first — the content -->
+          <!-- Section 6: Add the content into the main container -->
+          <div class="main-container">
+            <!-- Image Row: Displays the avatar -->
+            <div class="image-row">
+              <img src="new-headshot.jpg" alt="New headshot" class="avatar-image">
+            </div>
+      
+            <!-- Name Row: Shows the name -->
+            <div class="name-row">
+              Raghu Betina
+            </div>
+      
+            <!-- Social Icons Row: Links to your social profiles using Font Awesome icons -->
+            <div class="social-icons-row">
+              <a href="https://github.com/newusername" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/newusername/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/newusername/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/newusername" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+      
+            <!-- Links Row: List of clickable items (each with a thumbnail and link text) -->
+            <div class="links-row">
+              <div class="item">
+                <img src="/thumbnails/yc.png" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/startup-ideas">
+                  How to Find Innovative Startup Ideas
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/typography.jpg" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/typography-guide">
+                  Quick Typography Guide
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/checklist.webp" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/essential-checklist">
+                  Essential Checklist
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/tail-end.png" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/finishing-touches">
+                  Finishing Touches
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/rome.jpg" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/exploring-rome">
+                  Exploring Rome
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/egg.jpg" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/modern-egg">
+                  Modern Egg
+                </a>
+              </div>
+              <div class="item">
+                <img src="/thumbnails/question.jpg" class="thumbnail">
+                <a class="link-text" target="_blank" href="https://example.com/final-query">
+                  Final Query
+                </a>
+              </div>
+            </div> <!-- End of links-row -->
+          </div> <!-- End of main-container -->
+        </body>
+      </html>
+
+   ```
