@@ -163,3 +163,75 @@ psql pttl-42
 ```
 
 ---
+
+# Setup Version Control with Git and GitHub
+
+## Configure Git
+
+Replace the example name and email address in the following steps with the ones you used for your GitHub account.
+
+1. **Enable colorized output in Git**:
+   ```bash
+   git config --global color.ui true
+   ```
+
+2. **Set your GitHub username**:
+   ```bash
+   git config --global user.name "YOUR_USERNAME"
+   ```
+   Replace `"YOUR_USERNAME"` with your GitHub username.
+
+3. **Set your GitHub email**:
+   ```bash
+   git config --global user.email "YOUR@EMAIL.com"
+   ```
+   Replace `"YOUR@EMAIL.com"` with the email associated with your GitHub account.
+
+---
+
+## Generate an SSH Key
+
+To securely connect your machine to GitHub, generate an SSH key:
+
+1. Run the following command to create a new SSH key:
+   ```bash
+   ssh-keygen -t ed25519 -C "YOUR@EMAIL.com"
+   ```
+   Replace `"YOUR@EMAIL.com"` with the email associated with your GitHub account.
+
+2. When prompted to "Enter a file in which to save the key," press `Enter` to accept the default location.
+
+3. You can optionally add a passphrase for extra security, or press `Enter` to skip.
+
+---
+
+## Add the SSH Key to GitHub
+
+1. Copy the SSH key to your clipboard by running:
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+2. Log in to your GitHub account and go to **Settings** → **SSH and GPG keys** → **New SSH key**.
+
+3. Give the key a title (e.g., "My Laptop") and paste the copied SSH key into the "Key" field.
+
+4. Click **Add SSH key**.
+
+---
+
+## Verify the SSH Connection
+
+To check if the SSH key was successfully added, run:
+
+```bash
+ssh -T git@github.com
+```
+
+You should see a message like this:
+
+```
+Hi {github username}! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+This confirms that your machine is now connected to GitHub via SSH.
