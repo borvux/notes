@@ -38,3 +38,128 @@ For example:
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/dpi-pttl-3/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+
+---
+
+# Setup a Ruby Version Manager
+
+## Installing rbenv
+
+### Using Homebrew (Recommended)
+
+1. Open your terminal and run the following command to install `rbenv` and `ruby-build`:
+
+   ```bash
+   brew install rbenv ruby-build
+   ```
+
+2. Load `rbenv` in your shell by running:
+
+   ```bash
+   rbenv init
+   ```
+
+   Follow the printed instructions to set up `rbenv`.
+
+3. To automatically load `rbenv` in your shell, append the following code to your `~/.zshrc` file:
+
+   ```bash
+   eval "$(rbenv init - zsh)"
+   ```
+
+   To edit the `~/.zshrc` file in Visual Studio Code, run:
+
+   ```bash
+   code ~/.zshrc
+   ```
+
+   Paste the code above into the file, save it, and close it.
+
+4. Close your terminal and launch a new one for the changes to take effect.
+
+### Without Homebrew (Using rbenv-installer)
+
+If you aren’t using Homebrew, you can install `rbenv` by running the following command:
+
+```bash
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+```
+
+After installation, close your terminal and launch a new one for the changes to take effect.
+
+---
+
+# Choose and Install a Ruby Version
+
+## Determine the Required Ruby Version
+
+## Install a Ruby Version
+
+```bash
+rbenv install 3.2.1
+```
+
+Once the installation is complete, close your terminal and launch a new one for the changes to take effect.
+
+## Set a Ruby Version
+
+After installing the desired Ruby version, set it as the default or local version:
+
+- **Set the global Ruby version** (default for your machine):
+  ```bash
+  rbenv global 3.2.1
+  ```
+
+- **Set the local Ruby version** (specific to the current directory):
+  ```bash
+  rbenv local 3.2.1
+  ```
+
+## Verify the Ruby Version
+
+To check if the Ruby version was updated successfully, run:
+
+```bash
+ruby -v
+```
+
+## Install Rails
+
+Once Ruby is installed, you can install Rails by running:
+
+```bash
+gem install rails
+```
+
+This will download and install the latest version of Rails. After the installation is complete, close your terminal and launch a new one for the changes to take effect.
+
+To verify that Rails is installed, run:
+
+```bash
+rails -v
+```
+
+---
+
+## Install PostgreSQL
+
+To install PostgreSQL (a popular database used with Rails), use Homebrew:
+
+```bash
+brew install postgresql
+```
+
+Once the installation is complete, follow the instructions provided by Homebrew to start the PostgreSQL service:
+
+```bash
+# To have launchd start postgresql at login:
+brew services start postgresql
+```
+
+By default, the PostgreSQL user is your current macOS username with no password. For example, if your macOS username is `pttl-42`, you can log in to PostgreSQL with:
+
+```bash
+psql pttl-42
+```
+
+---
