@@ -51,14 +51,23 @@ end
 
 ## Putting code snippets
 using backticks `code` ` # your code `
-ruby: 
+
+` This is a code snippet `
+
+```ruby
+  def some_code()
+    # some code goes here
+  end
+```
+
 ```ruby
 # this is now ruby code
 ```
+
 ```ruby
 pp "#{hello_world}"
 ```
-html: 
+
 ```html
 <h1>Hello, world!</h1>
 ```
