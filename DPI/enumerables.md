@@ -45,11 +45,11 @@ first_multiple_of_5 = numbers.find { |n| n % 5 == 0 }
 multiples_of_3 = numbers.select { |n| n % 3 == 0 }
 
 # Collect numbers neither divisible by 3 nor 5
-non_multiples = numbers.reject { |n| n % 3 == 0 || n % 5 == 0 }
+none_multiples = numbers.reject { |n| n % 3 == 0 || n % 5 == 0 }
 
 pp first_multiple_of_5
 pp multiples_of_3
-pp non_multiples
+pp none_multiples
 ```
 
 # Syntaxes 
