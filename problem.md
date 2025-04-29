@@ -40,6 +40,5 @@ Create an interactive CLI application where users can:
         * Get the title of the item to return from the user.
         * Tell the library object to return the item matching that title.
     * **`'6'` (Exit):**
-        * Display a goodbye message.
         * Exit the loop (terminate the application).
   * Add a `puts "\nPress Enter to continue..."` and `gets` at the end of the loop to pause execution.
