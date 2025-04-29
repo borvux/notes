@@ -1,10 +1,5 @@
 # library.rb
 
-# Library: The library holds a collection of books. It should allow you to:
-# - Add new books.
-# - Check out a book (if it’s available).
-# - Return a book.
-
 require_relative "audiobook"
 
 class Library

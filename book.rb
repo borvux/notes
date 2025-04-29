@@ -1,8 +1,5 @@
 # book.rb
 
-# Book: Each book has a title, an author, and an availability status (whether the book is checked out).
-# availability :boolean
-
 require "active_support/all"
 
 class Book
