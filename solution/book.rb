@@ -1,8 +1,7 @@
 require "active_support/all"
 
 class Book
-  attr_reader :title, :author
-  attr_accessor :checked_out
+  attr_accessor :title, :author, :checked_out
 
   def initialize(title, author, checked_out = false)
     self.title = title
@@ -11,35 +10,25 @@ class Book
   end
 
   def title=(input)
-    raise "Title must be a non-empty string" unless input.is_a?(String) && !input.strip.empty?
-    @title = input.strip.titleize
+    raise "Title cannot be empty." if input.strip.empty?
+    @title = input.titleize
   end
 
   def author=(input)
-    raise "Author must be a non-empty string" unless input.is_a?(String) && !input.strip.empty?
-    @author = input.strip.titleize
+    raise "Author cannot be empty." if input.strip.empty?
+    @author = input.titleize
   end
 
   def check_out
-    if @checked_out
-      puts "'#{title}' is already checked out."
-      false
-    else
-      @checked_out = true
-      puts "'#{title}' checked out successfully."
-      true
-    end
+    return false if @checked_out
+    @checked_out = true
+    true
   end
 
-  def return
-    if !@checked_out
-      puts "'#{title}' is already checked in."
-      false
-    else
-      @checked_out = false
-      puts "'#{title}' returned successfully."
-      true
-    end
+  def return_item
+    return false unless @checked_out
+    @checked_out = false
+    true
   end
 
   def to_s
