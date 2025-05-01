@@ -35,9 +35,8 @@ class LibraryCli
   end
 
   def add_sample_data
-    book1 = Book.new("How to learn Math", "Barbar Oaklew")
-    audiobook1 = Audiobook.new("The Cat in the Hat", "Dr. Suess", "Monique", 11)
-
+    book1 = Book.new("How To Learn Math", "Barbara Oakley")
+    audiobook1 = Audiobook.new("The Cat In The Hat", "Dr. Seuss", "Kelsey Grammer", 11)
     @library.add_book(book1)
     @library.add_book(audiobook1)
   end
@@ -52,6 +51,7 @@ class LibraryCli
     puts "4. Check out an item"
     puts "5. Return an item"
     puts "6. Exit"
+    puts "=================================="
   end
 
   def get_user_input
