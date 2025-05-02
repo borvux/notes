@@ -3,6 +3,8 @@
 require_relative "audiobook"
 
 class Library
+  attr_reader :books
+  
   def initialize(books = [])
     @books = books
   end
@@ -15,7 +17,7 @@ class Library
     book = self.search_by_title(title)
 
     if book.nil? 
-      puts "Book not found"
+      raise "Book not found"
     else 
       book.check_out
     end
@@ -25,18 +27,10 @@ class Library
     book = self.search_by_title(title)
       
     if book.nil? 
-      puts "Book not found"
+      raise "Book not found" 
     else 
       book.return
     end
-  end
-
-  def list_books
-    puts "--- Library Catalog ---"
-    @books.each_with_index do |book, index|
-      puts "#{index + 1}. #{book}"
-    end
-    puts "---------------------"
   end
 
   private
