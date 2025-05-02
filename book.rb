@@ -22,25 +22,18 @@ class Book
   end
 
   def check_out
-    if @checked_out == true
-      puts "'#{title}'  is already checked out."
-    else
-      @checked_out = true
-      puts "'#{title}' checked out successfully."
-    end
+    raise "This book is already checked out" if @checked_out
+    @checked_out = true
+    return true
   end
 
   def return
-    if @checked_out == false
-      puts "'#{title}' is already checked in."
-    else
-      @checked_out = false
-      puts "'#{title}' returned successfully."
-    end
+    raise "This book is not checked out" unless @checked_out
+    @checked_out = false
+    return true
   end
 
   def to_s
     "#{title} by #{author} - #{@checked_out ? "Checked out" : "Available"}"
   end
 end
-
