@@ -8,12 +8,17 @@ class Audiobook < Book
   def initialize(title, author, narrator, duration, checked_out = false)
     super(title, author, checked_out)
     self.narrator = narrator
-    @duration = duration
+    self.duration = duration
   end
 
   def narrator=(input)
-    raise "title must be a string" unless input.is_a? String
+    raise "Narrator cannot be blank" if input.blank?
     @narrator = input.titleize
+  end
+
+  def duration=(input)
+    @duration = input.to_i
+    raise "Duration must be greater than 0" unless @duration > 0
   end
 
   def formatted_duration

@@ -12,12 +12,12 @@ class Book
   end
 
   def title=(input)
-    raise "title must be a string" unless input.is_a? String
+    raise "Title cannot be empty" if input.blank?
     @title = input.titleize
   end
 
   def author=(input)
-    raise "Author must contain words only" unless input.is_a?(String)
+    raise "Author cannot be empty" if input.blank?
     @author = input.titleize
   end
 

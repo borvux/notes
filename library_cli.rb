@@ -74,6 +74,8 @@ class LibraryCli
     new_book = Book.new(title, author)
     @library.add_book(new_book)
     puts "#{title} is sucessfully added"
+  rescue => e
+    puts "Error: #{e}"
   end
 
   def add_new_audiobook()
@@ -83,6 +85,8 @@ class LibraryCli
     new_audiobook = Audiobook.new(title, author, narrator, duration)
     @library.add_book(new_audiobook)
     puts "#{title} is successfully added"
+  rescue => e
+    puts "Error: #{e}"
   end
 
   def checkout()
