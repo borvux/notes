@@ -37,3 +37,8 @@
   - so some guesser have `higher weight` and some have `lower weight`
 - the neural networ is this team, becomes powerful becuase it can learn the perfect `weights` for thousands of these guessers to solve a problem. 
 - Makes it very super flexible, you can use the same kind of teams to learn to recognize dogs, cars, or even people's voices, by changing their trust levels aka `weights`
+
+# deep learning jargons
+- the functional form of `model` is called it's `architecture` but sometimes can be synonym
+- `weights` are `parameters`
+
