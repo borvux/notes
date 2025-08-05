@@ -83,7 +83,7 @@ The VS Code interface is primarily divided into three sections.
 | `⌘ + /` | Toggle a comment on the current line(s) |
 | `⌘ + Shift + P` | **Command Palette:** Access all VS Code commands |
 | `⌘ + B` | Show/hide the Explorer sidebar |
-| `⌘ + J` or `⌘ + \`` | Show/hide the integrated terminal |
+| `⌘ + J` or `⌘ + \` | Show/hide the integrated terminal |
 | `⌘ + Shift + \` | Jump to the matching bracket |
 | `⌘ + D` | Select the current word, and each next occurrence |
 | `⌘ + K`, then `⌘ + S` | Open the keyboard shortcuts menu (to customize) |
