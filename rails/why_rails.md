@@ -1,3 +1,9 @@
+# Why Rails 
+
+### Source: https://github.com/dpi-tta-slides/sdf-why-rails
+
+### Slides: https://dpi-tta-slides.github.io/sdf-why-rails/
+
 ### Slide 1: Why Rails?
 
 "Good morning, everyone. Today, we're going to talk about Ruby on Rails. Specifically, we'll be answering the question: 'Why Rails?' Why is this framework a great choice for building web applications?"
