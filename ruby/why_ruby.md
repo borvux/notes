@@ -1,3 +1,9 @@
+# Why Ruby and Rails?
+
+### Source: https://github.com/dpi-tta-slides/sdf-why-rails
+
+### Slides: https://dpi-tta-slides.github.io/sdf-why-rails/
+
 #### **Slide 1: Why Rails?**
 
 "Good morning, everyone. Today, we're going to look at the 'why' behind a significant part of your learning journey here. We'll be answering the question: 'Why Ruby and, eventually, Why Rails?' We'll explore why these technologies are a powerful choice for building modern web applications and how your current intro course is setting you up for success for our full stack web program that follows after."
