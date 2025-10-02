@@ -33,7 +33,7 @@ def populate_users(sheet, count)
     sheet.add_cell(row_index, 1, Faker::Name.unique.name)
     sheet.add_cell(row_index, 2, Faker::Internet.unique.email)
     sheet.add_cell(row_index, 3, Faker::Internet.password(min_length: 8))
-    sheet.add_cell(row_index, 4, [true, false].sample)
+    sheet.add_cell(row_index, 4, ['true', 'false'].sample)
     sheet.add_cell(row_index, 5, ['sales', 'management', 'admin'].sample)
   end
   Faker::Name.unique.clear # Clear unique names for other sheets
